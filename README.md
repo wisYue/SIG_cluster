@@ -14,21 +14,8 @@ To run SIG.jl, one needs to install some necessary packages in Julia:
 
 ```julia
 using Pkg
-Pkg.add(["PyCall","PyPlot","LsqFit","Images","LinearAlgebra","StatsBase","FITSIO","Statistics","ImageFiltering]")
+Pkg.add(["PyCall","PyPlot","LsqFit","Images","LinearAlgebra","StatsBase","FITSIO","Statistics","ImageFiltering","FFTW"])
 ```
-
-Then we need to include the two external packages "LazCore.jl" and "LazType.jl". In the root directory of Julia, which is typically "C:\Users\your_user_name\\.julia", creat a new directory "config" under the "./julia" directory and then put the "starup.jl" in the "config" direcotry. 
-
-In the starup.jl, please modify the "MODULE="F:\\julia" to the location where you save "LazCore.jl" and "LazType.jl" files.
-
-```julia
-println("Hello World!")
-MODULE="F:\\julia";
-push!(LOAD_PATH,MODULE)
-```
-
-Restart the Julia terminal, you should see "Hello World" at the beginning.
-
 #### 3. Demo
 
 A demo of SIG is provided in the SIG.jl file. The running time depends on how fast the cpu is. Typically it takes several hours and will produce the Fig. 6 in Hu et al. (2023).
